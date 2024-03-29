@@ -26,7 +26,7 @@ class HotelController extends Controller
     }
     
     public function show($id){
-        $hotel = Hotel::with('facilities')->with('reviews')->find($id);
+        $hotel = Hotel::with('facilities')->with('reviews')->with('reviews.user')->find($id);
         return response()->json(["data"=>$hotel,"status"=>"ok"]);
     }
 
