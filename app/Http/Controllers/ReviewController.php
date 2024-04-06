@@ -17,7 +17,7 @@ class ReviewController extends Controller
         //Hardcode first user_id to 1
         // $review->user_id = 1;
         //update user_id based on user login information
-        $review->user_id = Auth:user()->id;
+        $review->user_id = Auth::user()->id;
 
 
 
